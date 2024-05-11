@@ -1,8 +1,20 @@
 </HTML>
 
   <body>
-    <script>
-       <embed src="./movie.swf" width="550" height="400" />
+  <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+
+    window.addEventListener("DOMContentLoaded", () => {
+        let ruffle = window.RufflePlayer.newest();
+        let player = ruffle.createPlayer();
+        let container = document.getElementById("container");
+        container.appendChild(player);
+        player.load("./movie.swf");
+    });
+</script>
+<script src="./ruffle.js"></script>
+
+  <script>
         window.RufflePlayer = window.RufflePlayer || {};
 window.RufflePlayer.config = {
     // Options affecting the whole page
@@ -10,7 +22,7 @@ window.RufflePlayer.config = {
     "polyfills": true,
 
     // Options affecting files only
-    "allowScriptAccess": false, // Polyfill elements have a different default value, see the allowScriptAccess section
+    "allowScriptAccess": true, // Polyfill elements have a different default value, see the allowScriptAccess section
     "autoplay": "auto",
     "unmuteOverlay": "visible",
     "backgroundColor": null,
