@@ -2,13 +2,17 @@
 <head>
   <Head>
 <body>
-<script data="movie.swf" type="application/x-shockwave-flash" width="400" height="400">
-  <param name="movie" value="movie.swf" />
-  <param name="allowScriptAccess" value="sameDomain" />
-  <param name="quality" value="low" />
-  <param name="scale" value="noscale" />
-  <param name="menu" value="false" />
+<script>
+    window.RufflePlayer = window.RufflePlayer || {};
+
+    window.addEventListener("DOMContentLoaded", () => {
+        let ruffle = window.RufflePlayer.newest();
+        let player = ruffle.createPlayer();
+        let container = document.getElementById("container");
+        container.appendChild(player);
+        player.load("movie.swf");
+    });
 </script>
-<script src="ruffle.js"></script>
+<script src="path/to/ruffle/ruffle.js"></script>
 <body>
   <HTML>
