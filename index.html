@@ -1,60 +1,19 @@
-</HTML>
-
-  <body>
-  <script>
+<DOCTYPE html>
+  <Html ;amg="en">
+    <head>
+      
+    </head>
+    <body>
+      <script>
     window.RufflePlayer = window.RufflePlayer || {};
-
-    window.addEventListener("DOMContentLoaded", () => {
-        let ruffle = window.RufflePlayer.newest();
-        let player = ruffle.createPlayer();
-        let container = document.getElementById("container");
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("container");
         container.appendChild(player);
         player.load("./movie.swf");
     });
 </script>
-<script src="./ruffle.js"></script>
-
-  <script>
-        window.RufflePlayer = window.RufflePlayer || {};
-window.RufflePlayer.config = {
-    // Options affecting the whole page
-    "publicPath": undefined,
-    "polyfills": true,
-
-    // Options affecting files only
-    "allowScriptAccess": true, // Polyfill elements have a different default value, see the allowScriptAccess section
-    "autoplay": "auto",
-    "unmuteOverlay": "visible",
-    "backgroundColor": null,
-    "wmode": "window",
-    "letterbox": "fullscreen",
-    "warnOnUnsupportedContent": true,
-    "contextMenu": "on",
-    "showSwfDownload": true,
-    "upgradeToHttps": window.location.protocol === "https:",
-    "maxExecutionDuration": 100,
-    "logLevel": "error",
-    "base": null,
-    "menu": true,
-    "salign": "",
-    "forceAlign": false,
-    "scale": "showAll",
-    "forceScale": false,
-    "frameRate": null,
-    "quality": "low",
-    "splashScreen": true,
-    "preferredRenderer": null,
-    "openUrlMode": "allow",
-    "allowNetworking": "all",
-    "favorFlash": true,
-    "socketProxy": [],
-    "fontSources": [],
-    "defaultFonts": {},
-    "credentialAllowList": [],
-    "playerRuntime": "flashPlayer",
-    "allowFullscreen": true;
-};
-    </script>
-  <script src="./ruffle.js"></script>
-<body>
-  <HTML>
+<script src="path/to/ruffle/ruffle.js"></script>
+    </body>
+    
